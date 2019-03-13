@@ -1,0 +1,433 @@
+
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+  .hamburger {
+    display: block;
+  }    
+
+  .header {
+    padding: 5px 0;
+  }
+
+  .footer {
+    text-align: center;
+
+    &__top {
+      flex-direction: column;
+
+      & > * {
+          margin: 0 0 20px 0 !important;            
+      }
+    }
+  }
+
+	.main-menu {
+    display: none;
+    background-color: #fff;
+    position: fixed;
+    border-bottom: 1px solid $accent;
+    top: 98px;
+    left: 0;
+    right: 0;
+    text-align: left;
+    margin-left: 0;
+    z-index: 98;
+    padding: 10px 0;
+
+		ul {
+			display: block;
+			height: auto;
+      padding: 0;
+      margin: 0;
+
+			li {
+        margin: 0 0 5px;
+
+        &:last-child {
+          margin: 0;
+        }
+			}
+		}
+  }    
+
+  .s {
+    
+    &-main {
+      background-image: none;
+      padding: 150px 0 40px;
+
+      &__img {
+        position: relative;
+        right: 0;
+        top: 0;
+        text-align: center;
+      }
+
+      .form {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-about {
+      &__img {
+        display: none;
+      }
+      .about {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 15px 15px 20px 15px;
+        &--blue {
+          margin: 0 auto 30px;
+          &::after {
+            display: none;
+          }
+        }
+        &--gray {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-tovar {
+
+      .tab {
+        &__links {
+          margin-bottom: 30px;
+        }
+        &__link {
+          padding: 10px 20px;
+        }
+      }
+    }
+
+    &-cooperate {
+      padding: 30px 0 35px;
+
+      .cooperate {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-service {
+
+      &__content {
+        display: block;
+      }
+
+      .service {
+        margin: 0 auto 25px;
+      }
+
+      ul {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-reviews {
+      .review {
+        margin-bottom: 30px;
+        &__img {
+          left: 0;
+        }
+      }
+    }
+
+    &-thanks {
+      &__img {
+        display: none;
+      }
+      &__text {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {  
+
+  .form {
+    &__title {
+      font-size: 20px;
+    }
+    .input-div {
+      max-width: 500px;
+    }
+    &--horizontal {
+      .form {
+        &__content {
+          flex-direction: column;
+          max-width: 500px;
+        } 
+                
+        &__info {
+          max-width: 500px;
+        }
+      }
+
+      .input-div {
+        margin-right: 0;
+      }  
+    }
+
+    &--vertical {
+      .form {
+        &__content {
+          max-width: 500px;
+        }
+      }
+    }
+
+    .input-div, .button {
+      width: 100%;
+    }
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+
+  .header {
+    .grow {
+      display: block;
+    }
+  }
+
+  .main-menu {
+    top: 74px;
+  }
+  
+  .section {
+    &-title {
+      font-size: 24px;
+    }      
+  }
+
+  .s {
+    &-main {
+      padding: 130px 0 35px;
+      &__title {
+        font-size: 22px;
+        margin-bottom: 40px;
+      }
+    } 
+
+    &-payment {
+      background-image: none;
+      padding: 40px 0 35px;
+      .payment {
+        &:first-child {
+          margin-bottom: 40px;
+        }
+        &__title {
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+        &__text {
+          font-size: 20px;
+          margin: 0 auto 15px 0;
+        }
+      }
+    }
+
+    &-reviews {
+      .review {
+        margin: 0 auto 30px;
+      }
+    }
+
+    &-contact {
+
+      .contact {
+        position: relative;
+        padding: 25px 15px;
+        max-width: 500px;
+        margin: 20px auto;
+
+        &__title {
+          margin-bottom: 10px;
+        }
+
+        &__address, &__phone {
+          margin-bottom: 25px;
+        }
+
+        &__email {
+          margin-bottom: 0;
+        }
+      }
+
+      .map {
+        & > ymaps {
+          width: auto !important;
+          height: 300px !important;
+        }
+      }
+    }
+  }
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+  .break {
+    display: inline;
+  }
+
+  .call-me {
+    display: flex;
+  }
+
+  .remodal {
+    padding: 25px 15px;
+  }
+
+  .politika {
+    &__title {
+      font-size: 22px;
+    }
+  }
+
+  .s {
+
+    &-about {
+      .about {
+        ul {
+          li {
+            font-size: 15px;
+          }
+        }
+      }      
+    }
+    
+    &-tovar {
+
+      .tab {
+        &__link {
+          font-size: 16px;
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    &-cooperate {
+      .cooperate {
+        max-width: 262px;
+        width: 100%;
+        margin: 0 auto 25px;
+        height: 259px;
+
+        &__img {
+          img {
+          }
+        }
+      }
+    }
+
+    &-service {
+      .service {
+        max-width: 270px;
+        padding: 40px 10px;
+        &__title {
+          font-size: 20px;
+        }
+      }
+
+      &__title {
+        font-size: 22px;
+        margin-bottom: 25px;
+      }
+
+      ul {
+        li {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-reviews {
+
+      .review {
+        background-color: $accent;
+        padding: 20px 10px 20px;
+        &__img {
+          position: relative;
+          margin: 0 auto 20px;
+        }
+        &__name {
+          margin-bottom: 15px;
+        }
+        &__block {
+          background-color: none;
+          height: auto;
+          padding: 0;
+        }
+      }
+    }
+
+    &-thanks {
+      padding: 150px 0 50px;
+      
+      &-title {
+        font-size: 30px;
+      }
+
+      &-text {
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+  
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+  .main-menu {
+		.container {
+			width: auto;
+			padding: 0;
+		}
+  }
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
+
+@media screen and (max-width: 1400px) {
+  .s-main {
+    background-position: 670px center;
+  }
+  
+  .s-thanks {
+    background-position: 650px center;
+  }
+
+  .s-payment {
+    background-position: 620px center;
+  }
+}
