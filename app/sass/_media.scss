@@ -70,10 +70,14 @@
         right: 0;
         top: 0;
         text-align: center;
+        display: none; 
+        &--none {
+          display: block;
+        }
       }
 
       .form {
-        margin-bottom: 50px;
+        margin-top: 50px;
       }
     }
 
@@ -284,8 +288,8 @@
     display: inline;
   }
 
-  .call-me {
-    display: flex;
+  .callback__wrapper {
+    display: block !important; 
   }
 
   .remodal {
@@ -420,7 +424,7 @@
 
 @media screen and (max-width: 1400px) {
   .s-main {
-    background-position: 670px center;
+    background-position: 670px center !important;
   }
   
   .s-thanks {
@@ -429,5 +433,19 @@
 
   .s-payment {
     background-position: 620px center;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .s-main {
+    background-position: 750px center;
+  }
+  
+  .s-thanks {
+    background-position: 750px center;
+  }
+
+  .s-payment {
+    background-position: 720px center;
   }
 }

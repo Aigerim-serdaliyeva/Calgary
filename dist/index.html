@@ -25,7 +25,21 @@
   <div class="page-wrapper">
 
     <div class="page-top"><i class="fa fa-angle-double-up"></i></div>
-    <a href="tel:+77778249898" id="callMe" class="call-me"><i class="fa fa-phone"></i></a>
+
+    <div class="callback__wrapper">
+      <div class="callback__items">
+        <div class="callback__item">
+          <a target="_parent" href="https://api.whatsapp.com/send?phone=77012043618" id="whatsapp">
+            <i class="callback__icon callback__whatsapp"></i> WhatsApp
+          </a>
+        </div>
+        <div class="callback__item">
+          <a href="tel:+77778249898" id="callMe" class="call-me">
+            <i class="callback__icon callback__phone"></i>  Позвонить
+          </a>
+        </div>
+      </div>
+    </div>
 
     <header class="header">
       <div class="container">
@@ -87,6 +101,10 @@
             клиентов, закупая качественные радиаторы на 10%
             дешевле, чем у конкурентов!</h1>
         
+        <div class="s-main__img s-main__img--none">
+          <img src="./img/main-img.png" alt="">
+        </div>
+
         <div class="form form--vertical wow FadeIn">
           <form action="/mail.php" method="post">
             <div class="form__title">Оставьте заявку и получите оптовый прайс на почту</div>
